@@ -1,0 +1,226 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f7f0;
+    color: #333;
+}
+
+/* Navigation */
+header {
+    background-color: #fff;
+    padding: 20px 8%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #606c38;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #606c38;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(40, 50, 25, 0.65), rgba(40, 50, 25, 0.65)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72") center/cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #606c38;
+    color: white;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background-color: #414b25;
+}
+
+/* Categories */
+.categories {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.categories h2,
+.advantages h2,
+.about h2,
+.contact h2 {
+    color: #606c38;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #606c38;
+    margin: 18px 0 10px;
+}
+
+.card p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Advantages */
+.advantages {
+    background-color: #e9eadc;
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.advantages-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.advantages-list h3 {
+    color: #606c38;
+    margin-bottom: 12px;
+}
+
+/* About */
+.about {
+    padding: 80px 12%;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.about p {
+    margin-bottom: 15px;
+}
+
+/* Contact */
+.contact {
+    padding: 70px 8%;
+    text-align: center;
+    background-color: #e9eadc;
+}
+
+.contact form {
+    max-width: 550px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #414b25;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .cards,
+    .advantages-list {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+}
